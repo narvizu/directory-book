@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <title><%= pageTitle %></title>
+        <meta name="description" content="<%= pageTitle %>">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+        <header>
+            <h1><a href="/">Book Directory</a></h1>
+        </header>
+        <main>
+            <div class="grid">
+                <% if (editable && book) { %>
+                    <article class="card book-item">
+                        <form class="form-vert" action="/save-book" method="POST"> 
+                            <input type="hidden" value="<%= book.id %>" name="bookId">
+                            <label> 
+                                Title:
+                                <input type="text" name="title" value="<%= book.title%>"/>
+                              </label>
+                              <label> 
+                                Description:
+                                <!--input type="textarea" name="description" /-->
+                                <textarea name="description" rows="5"><%= book.description %></textarea>
+                              </label>
+                              <label> 
+                                Ranking:
+                                <input type="number" name="ranking" value="<%= book.ranking %>"  min="1" max="5"/>
+                              </label>
+                            <button class="s_button" type="submit">Save</button>
+                        </form>
+                    </article>
+                <% } else if (book) { %>
+                        <article class="book-item">
+                            <form action="/delete-book" method="post">
+                                <h1 class="b__title"><%= book.title %></h1>  
+                                <input type="hidden" value="<%= book.id %>" name="bookId">
+                                <div class="b__content">
+                                    <p class="b__description"><%= book.description %></p>
+                                    <% for (var i =0; i < book.ranking;  i++ ) { %>
+                                         
+                                        <div class="clip-star"></div>
+                                        <% } %>
+                                <div class="b__actions">
+                                    <span><a href="/edit-book/<%= book.id %>" class="btn">Edit</a></span>
+                                    <button type="submit" class="s_button">Delete</button>
+                                </div>
+                            </form>
+                        </article>
+                    <% } %>
+                </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,131 @@
+/*#B983FF purple
+#94B3FD   blue
+#94DAFF   blue
+#99FEFF   aqua this for links*/
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color:#94DAFF;
+    
+}
+
+a:hover{
+    text-decoration: none;
+    color:#99FEFF;
+    
+}
+
+main {
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    padding: 15px 55px;
+}
+
+header h1 a{
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    background-color: #94DAFF;
+}
+
+span.s_button {
+    padding: 15px 60px;
+    background-color: #B983FF;
+}
+
+a.button {
+    text-decoration: none;
+    color: black;
+}
+
+a.button:hover {
+    color: #99FEFF;
+}
+
+.d_separator {
+    margin: 100px 0;
+}
+
+.form-vert label {
+    display: block;
+    margin: 25px;
+    padding: 5px;
+    width: auto;
+}
+
+form.form-vert {
+    width: 500px;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 0 5px 30px;
+}
+
+button.s_button {
+    padding: 15px 60px;
+    background-color: #B983FF;
+    border: none;
+}
+button.s_button:hover {
+    color: #99FEFF;
+    cursor: pointer;
+}
+
+.card.book-item {
+    width: 20%;
+    display: inline-block;
+    margin: 2% 3.3% 2% 0;
+}
+
+form.form-vert > .s_button {
+    text-align: center;
+}
+
+form.form-vert label {
+    text-align: left;
+}
+
+article.book-item {
+    width: 50%;
+    margin: auto;
+}
+
+.b__content {
+    margin: 10% 0;
+}
+.b__actions {
+    margin-top: 10%;
+}
+.b__actions > * {
+    width: 30%;
+    margin: 0 5%;
+    display: inline-block;
+}
+.b__actions span {
+    background: #B983FF;
+    
+    padding: 15px 0px;
+}
+
+span a.btn {
+    color: black;
+    font-size: 13px;
+}
+
+.clip-star {
+    background: gold;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+  }
+
